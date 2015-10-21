@@ -19,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/nouveller/gulp/issues"
   },
-  "homepage": "https://github.com/nouveller/gulp#readme"
+  "homepage": "https://github.com/nouveller/gulp#readme",
+  "dependencies": {
+    "babelify": "^6.4.0",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-streamify": "^1.0.2",
+    "main-bower-files": "^2.9.0",
+    "streamqueue": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }

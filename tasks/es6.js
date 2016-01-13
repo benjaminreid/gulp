@@ -10,7 +10,7 @@ var streamqueue = require('streamqueue');
 
 function scripts(paths) {
   return browserify({ entries: paths.src, debug: true })
-    .transform(babelify)
+    .transform('babelify', { presets: ['es2015'] })
     .bundle()
     .pipe(source(paths.file));
 }

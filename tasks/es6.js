@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var babelify = require('babelify');
+var babelify_es6 = require('babel-preset-es2015');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
@@ -10,7 +11,7 @@ var streamqueue = require('streamqueue');
 
 function scripts(paths) {
   return browserify({ entries: paths.src, debug: true })
-    .transform('babelify', { presets: ['es2015'] })
+    .transform(babelify, { presets: [babelify_es6] })
     .bundle()
     .pipe(source(paths.file));
 }
